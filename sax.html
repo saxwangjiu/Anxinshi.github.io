@@ -2,20 +2,69 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+  <style>
+
+    .sticky-box-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color:darkcyan;
+        height: 100px;
+        z-index: 1;
+    }
+    .body {
+      margin: 1px;
+      padding: 1px;
+
+      background-color:cornflowerblue;
+    }
+    .snowflake {
+      position: absolute;
+      background-color: wheat;
+      border-radius: 50%;
+      animation: lightskyblue 10s linear infinite;
+    }
+    @keyframes snow {
+      2% {
+        transform: translateY(-100vh);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
 	</head>
 	<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+    <a href="saxwangjiu.github.io/index.html">
     <h1 name='' >施安心</h1>
-    <img src="C:\Users\yy\Desktop\a159fd96428c89e8989e60b0ccdb4e2.jpg" width="20%" height="200px">
+    </a>
+    <div class="sticky-box-top">
+    </div>
+    <img id="Cat" src="https://pic2.zhimg.com/v2-93aba9c44bf90fbae5d983b9528b5f93_r.jpg?source=1940ef5c" alt="Cat" width="100">
+
     <hr>
     <ul type="disc">
         <li>性别：女</li>
+        <a href="saxwangjiu.github.io/上海对外经贸大学.html">
+        <li>学校：上海对外经贸大学</li><a href="saxwangjiu.github.io/上海对外经贸大学.html">
+        </a>
         <li>电话：18055555555</li>
         <li>邮箱：306622176@qq.com</li>
         <li>生日：2004.05.29</li>
-        <li>兴趣：.......</li>
-    </ul>
+        <li>兴趣：毛茸茸的小动物</li>
+        <li>爱宠：汤圆~</li>
     <hr>
+
+
+
     <h2>教育背景Education</h2>
 		<table border="1" cellspacing="0">
 			<tr>
@@ -43,5 +92,17 @@
         <li>abcdefg</li>
     </ol>
     <p>I'm hosted with GitHub Pages.</p>
-	</body>
+    <script>
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      document.body.appendChild(snowflake);
+      setTimeout(() => {
+        document.body.removeChild(snowflake);
+      }, 10000);
+    }
+    setInterval(createSnowflake, 100);
+     </script>
+  </body>
 </html>
