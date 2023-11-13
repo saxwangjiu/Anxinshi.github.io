@@ -15,17 +15,19 @@
         height: 100px;
         z-index: 1;
     }
-    .body {
+    body {
       margin: 1px;
       padding: 1px;
-
-      background-color:cornflowerblue;
+      overflow: hidden;
+      background-color:blueviolet;
     }
     .snowflake {
       position: absolute;
-      background-color: wheat;
+      width:10px;
+      height:10px;
+      background-color: #ffffff;
       border-radius: 50%;
-      animation: lightskyblue 10s linear infinite;
+      animation: snow 10s linear infinite;
     }
     @keyframes snow {
       2% {
